@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
+
+*,
+::after,
+::before {
+   box-sizing: border-box;
+}
+
+
+:root{
+   /* colors */
+   --background-color: #7aa4ac;
+   --textColor: #333538;
+
+   /* typography */
+   --bodyFont: 'Montserrat', sans-serif;
+   --headingFont: 'Inconsolata', monospace;
+   --letterSpacing: 1px;
+}
+
+
+html{
+   font-size: 112.5%;
+}
+
+body{
+   background: var(--background-color);
+   color: var(--textColor);
+   font-family: var(--bodyFont);
+   font-weight: 400;
+   line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+   margin: 0;
+   margin-bottom: 1.38rem;
+   font-family: var(--headingFont);
+   font-weight: 300;
+   line-height: 1.3;
+   text-transform: capitalize;
+   letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+   font-size: 3rem;
+}
+
+h2 {
+   font-size: 2.441rem;
+}
+
+h3 {
+   font-size: 1.953rem;
+}
+
+h4 {
+   font-size: 1.563rem;
+}
+
+h5 {
+   font-size: 1.25rem;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+   align-items: center;
+   padding-top: 50px;
+   height: 100vh;
+   font-family: "poppins", sans-serif;
+}
+
+.toDoList {
+   width: 60%;
+}
+
+.toDoList h1 {
+   color: rgb(211, 22, 201);
+   font-size: 5em;
+   font-weight: 900;
+   padding: 10px 0;
+   text-align: center;
+   border-radius: 0.5rem 0.5rem 0 0;
+   background-color: #ffffff5a;
+}
+
+.toDoList form {
+   display: flex;
+   width: 100%;
+   background-color: #1c3cad;
+}
+
+.toDoList form input {
+   border: none;
+   background-color: #ce3ca9;
+   font-size: 1.2em;
+   color: rgb(248, 248, 248);
+   padding: 15px 10px;
+   width: 100%;
+   outline: 0;
+}
+
+::placeholder{
+   color: #fff;
+   text-transform: lowercase;
+   font-style: italic;
+   font-weight: 800;
+   font-size: 1.2em;
+}
+
+
+.toDoList form button {
+   width: 10%;
+   border: none;
+   background-color: rgb(204, 29, 146);
+   font-size: 3.2em;
+   font-weight: bold;
+   color: white;
+   
+}
+
+
+.container ul {
+   display: flex;
+   flex-direction: column;
+   list-style: none;
+   gap: 0.5em;
+   color: #fff;
+   width: 60%;
+}
+
+.container ul li {
+   padding: 15px 10px;
+   color:#ce3ca9;
+   border: 1.5px solid rgb(168, 17, 130);
+}
+
+li input {
+   width: fit-content;
+}
+
+.check {
+   width: 1.5em;
+   height: 1.5em;
+   cursor: pointer;
+   border: 1px solid rgb(226, 38, 195);
+   -webkit-appearance: none;
+}
+
+.check:checked {
+   background-color: rgb(238, 26, 192);
+   border: none;
+}
+
+.task {
+   font-size: 1.5em;
+   font-weight: bold;
+   padding: 0 10px;
+   width: fit-content;
+   background: transparent;
+   border: none;
+   color: rgb(224, 75, 187);
+}
+
+.task:focus {
+   outline: none;
+}
+
+.container .fa-trash {
+   float: right;
+   cursor: pointer;
+   font-size: 1.3em;
+}
+
+.container ul li i:hover {
+   color: rgb(255, 82, 82);
+}
+
+.completed {
+   color: rgba(255, 255, 255, 0.633);
+   text-decoration: line-through;
+}
+
+@media screen and (max-width: 768px) {
+   body {
+      font-size: 12px;
+   }
+
+   .toDoList {
+      width: 98%;
+   }
+
+   .container ul {
+      width: 95%;
+   }
+
+   .toDoList form button {
+      width: 19%;
+   }
+}
